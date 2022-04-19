@@ -1,0 +1,393 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DietChat</title>
+    <link rel="stylesheet" href="static/css/app.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css" />
+    <script src="https://unpkg.com/scrollreveal@4.0.0-beta.6"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Import Font Awesome Icon Font-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+      crossorigin="anonymous"
+    />
+
+    <!--Import materialize.css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="static/css/materialize.min.css"
+    />
+
+    <!--Main css-->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+    <!--chatbot widget -->
+    <div class="widget">
+        <div class="chat_header">
+          <!--Add the name of the bot here -->
+          <span class="chat_header_title">DietChat</span>
+          <span class="dropdown-trigger" href="#" data-target="dropdown1">
+            <i class="material-icons"> more_vert </i>
+          </span>
+
+          <!-- Dropdown menuv1-->
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#" id="clear">Clear</a></li>
+            <li><a href="#" id="restart">Restart</a></li>
+            <li><a href="#" id="close">Close</a></li>
+          </ul>
+        </div>
+
+        <!--Chatbot contents goes here -->
+        <div class="chats" id="chats">
+          <div class="clearfix"></div>
+          <img class="botAvatar" src="./static/img/sara_avatar.png">
+          <p class="botMsg" >Hey there!! I am a health chatbot</p>
+          <div class="clearfix" ></div>
+        </div>
+
+        <!--keypad for user to type the message -->
+        <div class="keypad">
+          <div style="display:inline-block;">  
+          <input type="text" 
+            id="userInput"
+            placeholder=" Type a message..."
+            class="usrInput"" 
+          ></input></div>
+          <div id="sendButton" style="display:inline;">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <!--bot profile-->
+      <div class="profile_div" id="profile_div">
+        <img class="imgProfile" src="static/img/chatbot_logo.png" />
+      </div>
+
+      <!-- Bot pop-up intro -->
+      <div class="tap-target" data-target="profile_div">
+        <div class="tap-target-content">
+          <h5 class="white-text">Hey there 👋</h5>
+          <p class="white-text">
+                I can help you with your healthy <br> diet analysis
+                and can answer your <br>
+                nutrition related 
+                questions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="top-menuv1  scroll-reveal">
+                    <div class="menuv1">
+                        <div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="medium">
+                            <button class="menuv1-icon dark" type="button" data-toggle="main-nav"></button>
+                            <div class="title-bar-title">menu</div>
+                        </div>
+
+                        <nav id="main-nav" data-animate="menuv1-in menuv1-out">
+                            <ul class="main-navigation">
+                                <li><a class="m-active" href="#" data-text="Home">Home</a></li>
+                                <li><a class="m-anim" href="#specials-grid" data-text="Specials">Specials</a></li>
+                                <li><a class="m-anim" href="#about-us" data-text="About">About</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="a-slide slide1">
+                <div class="container">
+                    <div class="bottom-section scroll-reveal" data-origin="right" data-distance="20%">
+                        <h1 class="header-txt">Time and health are two precious assets that we don’t recognize and appreciate until they have been depleted.</h1>
+                        <div class="divider">
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1930 255.5" style="enable-background:new 0 0 1930 255.5;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#3c3c3c;stroke-width:10;stroke-linecap:square;stroke-miterlimit:10;}
+                                </style>
+                                <polyline class="st0" points="1224,171.8 1181.3,171.8 1139.2,129.6 1065,203.9 970.5,110.4 876,203.6 801.8,129.4 759.7,171.5 
+                                    717,171.5 "/>
+                                <polyline class="st0" points="5,131.5 757.3,131.5 801.8,176.1 885.9,91.9 868.3,74.2 831.5,111 870.4,149.9 970.2,50.2 1070,149.9 
+                                    1108.8,111 1072.1,74.2 1054.4,91.9 1138.5,176.1 1183.1,131.5 1925,131.5 "/>
+                                <rect x="921.9" y="26.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 231.426 707.2043)" class="st0" width="95" height="95"/>
+                                <rect x="921.9" y="99.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 179.8072 728.5855)" class="st0" width="95" height="95"/>
+                                <rect x="940.3" y="178.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 137.3893 746.1556)" class="st0" width="58.2" height="58.2"/>
+                                </svg>
+                        </div>
+                        <!--.divider-->
+
+                    </div>
+                    <!--.bottom-section-->
+                </div>
+            </div>
+            <div class="a-slide slide2">
+                <div class="container">
+                    <div class="bottom-section">
+                        <h1 class="header-txt">Your diet is a bank account. Good food choices are good investments.</h1>
+                        <div class="divider">
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1930 255.5" style="enable-background:new 0 0 1930 255.5;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#3c3c3c;stroke-width:10;stroke-linecap:square;stroke-miterlimit:10;}
+                                </style>
+                                <polyline class="st0" points="1224,171.8 1181.3,171.8 1139.2,129.6 1065,203.9 970.5,110.4 876,203.6 801.8,129.4 759.7,171.5 
+                                    717,171.5 "/>
+                                <polyline class="st0" points="5,131.5 757.3,131.5 801.8,176.1 885.9,91.9 868.3,74.2 831.5,111 870.4,149.9 970.2,50.2 1070,149.9 
+                                    1108.8,111 1072.1,74.2 1054.4,91.9 1138.5,176.1 1183.1,131.5 1925,131.5 "/>
+                                <rect x="921.9" y="26.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 231.426 707.2043)" class="st0" width="95" height="95"/>
+                                <rect x="921.9" y="99.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 179.8072 728.5855)" class="st0" width="95" height="95"/>
+                                <rect x="940.3" y="178.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 137.3893 746.1556)" class="st0" width="58.2" height="58.2"/>
+                                </svg>
+                        </div>
+                        <!--.divider-->
+                    </div>
+                    <!--.bottom-section-->
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="category-icons">
+        <div class="container">
+            <div class="yellow-content">
+                <div class="icon">
+                    <img class="scroll-reveal" data-origin="top" data-distance="20%" src="static/assets/icon-vege.svg" />
+                    <h3 class="scroll-reveal" data-origin="top" data-distance="20%">Body Mass Index</h3>
+                    <p class="scroll-reveal" data-distance="0" data-duration="500">BMI is an estimate of body fat and a good gauge of your risk for diseases that can occur with more body fat. The higher your BMI, the higher your risk for certain diseases such as heart disease, high blood pressure, type 2 diabetes, gallstones, breathing problems, and certain cancers.</p>
+                </div>
+                <div class="icon">
+                    <img class="scroll-reveal" data-origin="top" data-distance="20%" src="static/assets/icon-sweet.svg" />
+                    <h3 class="scroll-reveal" data-origin="top" data-distance="20%">Basal Metabolic Rate</h3>
+                    <p class="scroll-reveal" data-distance="0" data-duration="700">BMR Calculator estimates your basal metabolic rate—the amount of energy expended while at rest in a neutrally temperate environment, and in a post-absorptive state (meaning that the digestive system is inactive, which requires about 12 hours of fasting).</p>
+                </div>
+                <div class="icon">
+                    <img class="scroll-reveal" data-origin="top" data-distance="20%" src="static/assets/icon-coffee.svg" />
+                    <h3 class="scroll-reveal" data-origin="top" data-distance="20%">Water Intake</h3>
+                    <p class="scroll-reveal" data-distance="0" data-duration="900">This water intake calculator will help you to estimate your adequate water intake per day. Whether you want to check daily water intake for an adult, teen, child or even infant, this hydration calculator can do it in no time.</p>
+                </div>
+            </div>
+            <!--.yellow-content-->
+        </div>
+        <!--.container-->
+    </section>
+    <!--.category-icons-->
+
+    <section id="specials-grid" class="month-specials" data-scroll-reveal="enter from the bottom after 0.9s">
+        <div class="container">
+            <h1 class="header-txt">Our Diet Chart Dataset contains various Cuisines like</h1>
+            <div class="divider">
+                <?xml version="1.0" encoding="utf-8"?>
+                <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1930 255.5" style="enable-background:new 0 0 1930 255.5;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#3c3c3c;stroke-width:10;stroke-linecap:square;stroke-miterlimit:10;}
+                                </style>
+                                <polyline class="st0" points="1224,171.8 1181.3,171.8 1139.2,129.6 1065,203.9 970.5,110.4 876,203.6 801.8,129.4 759.7,171.5 
+                                    717,171.5 "/>
+                                <polyline class="st0" points="5,131.5 757.3,131.5 801.8,176.1 885.9,91.9 868.3,74.2 831.5,111 870.4,149.9 970.2,50.2 1070,149.9 
+                                    1108.8,111 1072.1,74.2 1054.4,91.9 1138.5,176.1 1183.1,131.5 1925,131.5 "/>
+                                <rect x="921.9" y="26.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 231.426 707.2043)" class="st0" width="95" height="95"/>
+                                <rect x="921.9" y="99.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 179.8072 728.5855)" class="st0" width="95" height="95"/>
+                                <rect x="940.3" y="178.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 137.3893 746.1556)" class="st0" width="58.2" height="58.2"/>
+                                </svg>
+            </div>
+            <!--.divider-->
+            <div class="specials-content">
+                <div class="special">
+                    <div class>
+                        <img src="static/assets/img/special-1.png" />
+                    </div>
+                    <div class="special-items spec-01">
+                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Salads</h2>
+                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
+                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Lettuce Salad with Avocado, Tomato, and/or Carrots</p>
+                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">58 Calories</span>
+                    </div>
+                </div>
+                <!--.special-->
+                <div class="special">
+                    <div class>
+                        <img src="static/assets/img/special-2.png" />
+                    </div>
+                    <div class="special-items spec-02">
+                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Curry</h2>
+                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
+                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Pork Vindaloo</p>
+                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">184 Calories</span>
+                    </div>
+                </div>
+                <!--.special-->
+                <div class="special">
+                    <div class>
+                        <img src="static/assets/img/special-3.png" />
+                    </div>
+                    <div class="special-items spec-03">
+                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Veggies</h2>
+                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
+                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Kohlrabi onions with capsicum</p>
+                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">110 Calories</span>
+                    </div>
+                </div>
+                <!--.special-->
+                <div class="special">
+                    <div class="special-items spec-04">
+                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Deserts</h2>
+                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
+                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Apple cinnamon custard cake</p>
+                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">219 Calories</span>
+                    </div>
+                    <div class>
+                        <img src="static/assets/img/special-4.png" />
+                    </div>
+                </div>
+                <!--.special-->
+                <div class="special">
+                    <div class="special-items spec-05">
+                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Donut</h2>
+                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
+                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Chocolate Frosted Doughnut</p>
+                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">340 Calories</span>
+                    </div>
+                    <div class>
+                        <img src="static/assets/img/special-5.png" />
+                    </div>
+                </div>
+                <!--.special-->
+                <div class="special">
+                    <div class="special-items spec-06">
+                        <h2 class="scroll-reveal" data-origin="top" data-distance="20%">Fruit Juice</h2>
+                        <span class="line scroll-reveal" data-origin="top" data-distance="20%"></span>
+                        <p class="scroll-reveal" data-origin="bottom" data-distance="30%">Watermelon Juice</p>
+                        <span class="scroll-reveal" data-origin="bottom" data-distance="60%">100 Calories</span>
+                    </div>
+                    <div class>
+                        <img src="static/assets/img/special-6.png" />
+                    </div>
+                </div>
+                <!--.special-->
+            </div>
+            <!--.specials-content-->
+        </div>
+        <!--.container-->
+    </section>
+    <!--.month-specials-->
+
+    <section id="about-us" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h1 class="header-txt scroll-reveal">About us</h1>
+                <div class="divider scroll-reveal">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1930 255.5" style="enable-background:new 0 0 1930 255.5;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0{fill:none;stroke:#3c3c3c;stroke-width:10;stroke-linecap:square;stroke-miterlimit:10;}
+                                </style>
+                                <polyline class="st0" points="1224,171.8 1181.3,171.8 1139.2,129.6 1065,203.9 970.5,110.4 876,203.6 801.8,129.4 759.7,171.5 
+                                    717,171.5 "/>
+                                <polyline class="st0" points="5,131.5 757.3,131.5 801.8,176.1 885.9,91.9 868.3,74.2 831.5,111 870.4,149.9 970.2,50.2 1070,149.9 
+                                    1108.8,111 1072.1,74.2 1054.4,91.9 1138.5,176.1 1183.1,131.5 1925,131.5 "/>
+                                <rect x="921.9" y="26.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 231.426 707.2043)" class="st0" width="95" height="95"/>
+                                <rect x="921.9" y="99.7" transform="matrix(0.7071 -0.7071 0.7071 0.7071 179.8072 728.5855)" class="st0" width="95" height="95"/>
+                                <rect x="940.3" y="178.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 137.3893 746.1556)" class="st0" width="58.2" height="58.2"/>
+                                </svg>
+                </div>
+                <!--.divider-->
+                <p class="scroll-reveal" data-origin="top" data-distance="10%">We break the stereotypes "healthy eating is boring". Reach your weight health and workout goals with deliciously healthy food. We have various diet plans customized to suit your specific health and weight requirements.</p>
+                
+            </div>
+        </div>
+        <!--.container-->
+    </section>
+    <!--.about-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/what-input/5.0.2/what-input.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.js"></script>
+    <script src="static/js/app.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <script type="text/javascript">
+        $('.slider').slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3500,
+            arrows: false,
+            fade: true,
+            cssEase: 'linear'
+        });
+
+    </script>
+
+    <script>
+        $(window).on('load', function() {
+            $("#preloader").fadeOut();
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="static/js/lib/materialize.min.js"
+    ></script>
+    <script src="static/js/lib/uuid.min.js"></script>
+    <!--Main Script -->
+    <script type="text/javascript" src="static/js/script.js"></script>
+
+    <!--Chart.js Script -->
+    <script type="text/javascript" src="static/js/lib/chart.min.js"></script>
+    <script type="text/javascript" src="static/js/lib/showdown.min.js"></script>
+</body>
+
+</html>
