@@ -1,0 +1,186 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hii
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - ok
+    - okay
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - i am fine
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: food
+  examples: |
+    - food
+
+- intent: inp_foodname
+  examples: |
+    - [cheese pizza](foodname)
+    - [paneer chilly](foodname)
+    - [red beans](foodname)
+    - i have eaten today [thin cheese crust pizza](foodname)
+    - in the lunch i have taken [butter chicken](foodname)
+    - how much calorie is there in [paneer](foodname)
+- intent: request_names
+  examples: |
+    - [mahir](name)
+    - [bhavik](name)
+    - [dhariyashill](name)
+    - [sahil](name)
+    - [prince](name)
+    - [jasmin](name)
+    - [kaivel](name)
+    - [bhavya](name)
+    - [namra](name)
+    - [kinjal](name)
+    - [yash](name)
+    - [jehan](name)
+    - [mahir](name)]
+- intent: inp_height
+  examples: |
+    - my height is [185.5](height)
+    - [162.5](height)
+    - here is my height [172.3](height)
+    - [165.5](height)
+    - [166.5](height)
+    - [170.0](height)
+    - [165](height)
+    - [167.5](height)
+
+- intent: inp_weight
+  examples: |
+    - my weight is [66.0](weight)
+    - [70.0](weight)
+    - here is my weight [85.0](weight)
+    - [65.5](weight)
+    - [69.5](weight)
+    - [75.0](weight)
+    - [69](weight)
+    - [69.0](weight)
+    - [60](weight)
+    - [66](weight)
+
+- intent: inp_gender
+  examples: |
+    - [male](gender)
+    - [female](gender)
+- intent: inp_age
+  examples: |
+    - [22](age)
+    - [25](age)
+    - [56](age)
+    - [19](age)
+- intent: BMI
+  examples: |
+    - BMI
+    - calculate BMI
+- intent: BMR
+  examples: |
+    - BMR
+    - calculate BMR
+
+- intent: diet_chart
+  examples: |
+    - diet_chart
+
+- intent: physical_factor
+  examples: |
+    - [1](pftype)
+    - [2](pftype)
+    - [3](pftype)
+    - [4](pftype)
+    - [5](pftype)
+
+- intent: programe_level
+  examples: |
+    - [easy](plevel)
+    - [medium](plevel)
+    - [hard](plevel)
+
+- intent: food_type
+  examples: |
+    - [veg](ftype)
+    - [non-veg](ftype)
+
+- intent: waterintake
+  examples: |
+    - water_intake

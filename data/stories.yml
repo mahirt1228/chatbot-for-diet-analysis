@@ -1,0 +1,204 @@
+version: "2.0"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_ask_food
+
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_goodbye
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+- story: food_detail_path
+  steps:
+  - intent: food
+  - action: food_form
+  - active_loop: food_form
+  - slot_was_set:
+    - requested_slot: foodname
+  - slot_was_set:
+    - foodname: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_food_detail
+  - intent: affirm
+  - action: utter_ask_user to perform
+
+
+- story : BMI_calculator
+  steps:
+  - intent: BMI
+  - action:  BMI_form
+  - active_loop:  BMI_form
+  - slot_was_set:
+    - requested_slot: height
+  - slot_was_set:
+    - height: null
+  - slot_was_set:
+    - requested_slot: weight
+  - slot_was_set:
+    - weight: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: BMI_form
+  - active_loop: null
+  - action: calculate_BMI
+  - intent: affirm
+  - action: utter_ask_user to perform
+
+
+- story: name_path
+  steps:
+  - intent: greet
+  - action: name_form
+  - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: action_name
+  - action: utter_ask_user to perform
+
+- story: waterintake_path
+  steps:
+  - intent: waterintake
+  - action:  water_intake_form
+  - active_loop: water_intake_form
+  - slot_was_set:
+    - requested_slot: weight
+  - slot_was_set:
+    - weight: null
+  - slot_was_set:
+    - requested_slot: age
+  - slot_was_set:
+    - age: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: waterintake_action
+  - intent: affirm
+  - action: utter_ask_user to perform
+  
+
+
+
+# - story: bmr_form_path
+#   steps:
+#   - intent: BMR
+#   - action: BMR_form
+#   - active_loop: BMR_form
+#   - slot_was_set:
+#     - requested_slot: bmr_height
+#   - slot_was_set:
+#     - bmr_height: null
+#   - slot_was_set:
+#     - requested_slot: bmr_weight
+#   - slot_was_set:
+#     - bmr_weight: null
+#   - slot_was_set:
+#     - requested_slot: age
+#   - slot_was_set:
+#     - age: null
+#   - slot_was_set:
+#     - requested_slot: gender
+#   - slot_was_set:
+#     - gender: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: calculate_BMR
+
+
+
+- story: interactive_story_1
+  steps:
+  - intent: BMR
+  - action: BMR_form
+  - active_loop: BMR_form
+  - slot_was_set:
+    - requested_slot: height
+  - slot_was_set:
+    - height: null
+  - slot_was_set:
+    - requested_slot: weight
+  - slot_was_set:
+    - weight: null
+  - slot_was_set:
+    - requested_slot: gender
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - requested_slot: age
+  - slot_was_set:
+    - age: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: calculate_BMR
+  - intent: affirm
+  - action: utter_ask_user to perform
+
+- story: interactive_story_2
+  steps:
+  - intent: diet_chart
+  - action: diet_form
+  - active_loop: diet_form
+  - slot_was_set:
+    - requested_slot: height
+  - slot_was_set:
+    - height: null
+  - slot_was_set:
+    - requested_slot: weight
+  - slot_was_set:
+    - weight: null
+  - slot_was_set:
+    - requested_slot: gender
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - requested_slot: age
+  - slot_was_set:
+    - age: null
+  - slot_was_set:
+    - requested_slot: pftype
+  - slot_was_set:
+    - pftype: null
+  - slot_was_set:
+    - requested_slot: level
+  - slot_was_set:
+    - level: null
+  - slot_was_set:
+    - requested_slot: ftype
+  - slot_was_set:
+    - ftype: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: diet_chart_formation
+  - intent: affirm
+  - action: utter_ask_user to perform
+

@@ -1,0 +1,113 @@
+version: "2.0"
+
+rules:
+
+- rule: ask_to_perfome
+  steps:
+  - intent: affirm
+  - action: utter_ask_user to perform
+
+- rule: negative
+  steps:
+  - intent: deny
+  - action: utter_goodday
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Activate form
+  steps:
+  - intent: BMI
+  - action:  BMI_form
+  - active_loop:  BMI_form
+
+- rule: Auth submit and deactivate form
+  condition:
+  - active_loop: BMI_form
+  steps:
+  - action: BMI_form
+  - active_loop: null
+  - action: calculate_BMI
+  
+
+- rule: Activate form
+  steps:
+  - intent: BMR
+  - action:  BMR_form
+  - active_loop:  BMR_form
+
+- rule: Submit Form
+  condition:
+  - active_loop: BMR_form
+  steps:
+  - action: BMR_form
+  - active_loop: null
+  - action: calculate_BMR
+ 
+- rule: Activate form
+  steps:
+  - intent: request_names
+  - action: name_form
+  - active_loop: name_form
+
+- rule: Submit Form
+  condition:
+  - active_loop: name_form
+  steps:
+  - action: name_form
+  - active_loop: null
+  - action: utter_submit
+  - action: action_name
+  - action: utter_ask_user to perform
+
+
+- rule: Activate form
+  steps:
+  - intent: diet_chart
+  - action:  diet_form
+  - active_loop:  diet_form
+
+- rule: Submit Form
+  condition:
+  - active_loop: diet_form
+  steps:
+  - action: diet_form
+  - active_loop: null
+  - action: diet_chart_formation
+  
+
+- rule: Activate form
+  steps:
+  - intent: food
+  - action:  food_form
+  - active_loop:  food_form
+
+- rule: Submit Form
+  condition:
+  - active_loop: food_form
+  steps:
+  - action: food_form
+  - active_loop: null
+  - action: action_food_detail
+ 
+
+- rule: Activate form
+  steps:
+  - intent: waterintake
+  - action:  water_intake_form
+  - active_loop:  water_intake_form
+
+- rule: Submit Form
+  condition:
+  - active_loop: water_intake_form
+  steps:
+  - action: water_intake_form
+  - active_loop: null
+  - action: waterintake_action
