@@ -1,5 +1,6 @@
 # chatbot-for-diet-analysis
 This chatbot is developed in rasa framework. it recommends the food item to the user on the basis of their bmr,bmi as well as the physical factor.
+This chatbot will give the diet_plan to the user in the pdf format in the chat itself.
 
 How to run the chatbot in the broswer
 -----------------------------------------------------------
