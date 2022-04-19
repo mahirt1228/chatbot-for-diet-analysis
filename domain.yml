@@ -1,0 +1,224 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+intents:
+- BMI
+- BMR
+- affirm
+- bot_challenge
+- deny
+- inp_foodname
+- goodbye
+- greet
+- inp_age
+- inp_gender
+- inp_height
+- inp_weight
+- mood_great
+- mood_unhappy
+- name
+- request_names
+- physical_factor
+- diet_chart
+- uw_level
+- food_type
+- programe_level
+- food
+- waterintake
+entities:
+- name
+- gender
+- age
+- height
+- weight
+- foodname
+- pftype
+- plevel
+- ftype
+- water_intake
+slots:
+  foodname:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  name:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  height:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  weight:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  age:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  gender:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  
+  pftype:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  plevel:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  ftype:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  water_intake:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+responses:
+ utter_ask_foodname:
+  - text: what have you eaten recently my friend?
+  utter_greet:
+  - text: Hey there!
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_pdf:
+  - text: "Here is the PDF."
+    custom: 
+      payload: pdf_attachment
+      title: "PDF Title"
+      url: "URL to PDF file"
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_info:
+  - text: Here is your diet plan
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a nutrition chat bot, powered by Rasa.
+  utter_submit:
+  - text: Ok. Thanks!
+  utter_ask_user to perform:
+  - text: what would you like to do?
+    buttons:
+    - title: calculate BMI
+      payload: BMI
+    - title: calculate BMR
+      payload: BMR
+    - title: prepare your diet chart
+      payload: diet_chart
+    - title: Calorie Calculator
+      payload: food
+    - title: Water intake Calculator
+      payload: waterintake
+  utter_ask_pftype:
+  - text: Can you tell me your Physical Activity Factor?
+    buttons:
+    - title: sedentary (little or no exercise)
+      payload: '1'
+    - title: lightly active (light exercise/sports 1-3 days/week)
+      payload: '2'
+    - title: moderatetely active (moderate exercise/sports 3-5 days/week)
+      payload: '3'
+    - title: very active (hard exercise/sports 6-7 days a week)
+      payload: '4'
+    - title: extra active (very hard exercise/sports & physical job or 2x training)
+      payload: '5'
+  utter_ask_plevel:
+  - text: choose your programme level
+    buttons:
+    - title: Easy
+      payload: 'easy'
+    - title: Medium
+      payload: 'medium'
+    - title: Hard
+      payload: 'hard'
+  utter_ask_name:
+  - text: What is your name?
+  utter_ask_gender:
+  - text: What is you gender?
+    buttons:
+    - title: Male
+      payload: 'male'
+    - title: Female
+      payload: 'female'
+  utter_ask_height:
+  - text: What is your height(cm)?
+  utter_ask_weight:
+  - text: What is your weight(kg)?
+  utter_ask_age:
+  - text: What is your age?
+  utter_ask_ftype:
+  - text: Are you veg or non-veg?
+    buttons:
+    - title: Veg
+      payload: veg
+    - title: Non-Veg
+      payload: non-veg
+  utter_goodday:
+  - text: Bye, Have a Good Day ahead
+  
+actions:
+- action_food_detail
+- utter_goodday
+- action_name
+- calculate_BMI
+- calculate_BMR
+- utter_ask_user to perform
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- diet_chart_formation
+- waterintake_action
+forms:
+  BMI_form:
+    required_slots:
+      height:
+      - type: from_text
+      weight:
+      - type: from_text
+  BMR_form:
+    required_slots:
+      height:
+      - type: from_text
+      weight:
+      - type: from_text
+      age:
+      - type: from_text
+      gender:
+      - type: from_text
+  name_form:
+    required_slots:
+      name:
+      - type: from_text
+  diet_form:
+    required_slots:
+      height:
+      - type: from_text
+      weight:
+      - type: from_text
+      age:
+      - type: from_text
+      gender:
+      - type: from_text
+      pftype:
+      - type: from_text
+      plevel:
+      - type: from_text
+      ftype:
+      - type: from_text
+  food_form:
+    required_slots:
+      foodname:
+      - type: from_text
+  water_intake_form:
+    required_slots:
+      weight:
+      - type: from_text
+      age:
+      - type: from_text
