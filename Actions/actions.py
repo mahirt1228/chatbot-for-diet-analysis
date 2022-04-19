@@ -87,8 +87,8 @@ class Actionfooddetail(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             
-            consumer_key = '3671c8ccf31b4431b8baa8644cfb5a93'
-            consumer_secret = 'be787ee772b44c74b58fc46b91d00fd9'
+            consumer_key = ''
+            consumer_secret = ''
             fs = Fatsecret(consumer_key, consumer_secret)
             foodname = tracker.get_slot('foodname')
             foods = fs.foods_search(foodname)
