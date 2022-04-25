@@ -19,6 +19,8 @@ open 1st Terminal
  run commands in 1st terminal : 
 	a)rasa train (this command will train the rasa model)
 	b)rasa run -m models --enable-api --cors "*" (This command will start the server)
+				or
+	b)  rasa run --log-file out.log --cors * --enable-api
 
 2nd Terminal run Command:
 	a)rasa run actions (This command will start the actions server)
